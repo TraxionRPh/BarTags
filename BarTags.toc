@@ -1,0 +1,13 @@
+## Interface: 110100
+## Title: BarTags
+## Notes: An addon to highlight and tag sections of your action bars.
+## Author: Traxion
+## Version: 1.0
+## OptionalDeps: Ace3
+## X-Embeds: Ace3
+## SavedVariablesPerCharacter: BarTagsDB
+
+embeds.xml
+Libs/LibDataBroker-1.1/LibDataBroker-1.1.lua
+Libs/LibDBIcon-1.0/LibDBIcon-1.0/LibDBIcon-1.0.lua
+BarTags.lua
