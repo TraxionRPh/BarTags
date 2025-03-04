@@ -6,6 +6,7 @@
 ## OptionalDeps: Ace3
 ## X-Embeds: Ace3
 ## SavedVariablesPerCharacter: BarTagsDB
+## SavedVariables: BarTagsMinimapDB
 
 embeds.xml
 Libs/LibDataBroker-1.1/LibDataBroker-1.1.lua

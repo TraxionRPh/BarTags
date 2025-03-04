@@ -10,10 +10,6 @@ local defaults = {
         defaultColor = { r = 0.5, g = 0.5, b = 0.5 },
         showGroupTagTooltip = true,
         showActionBarIDs = true,
-        minimap = {
-            hide = false,
-            minimapPos = 180,
-        }
     },
 }
 
@@ -461,6 +457,10 @@ function BarTags:CloseOptions()
 end
 
 function BarTags:OnInitialize()
+    if not BarTagsMinimapDB then
+        BarTagsMinimapDB = { hide = false, minimapPos = 180 }
+    end
+
     self.db = AceDB:New("BarTagsDB", defaults, true)
 
     AceConfig:RegisterOptionsTable("BarTags", BuildOptions)
@@ -489,7 +489,7 @@ function BarTags:OnInitialize()
     })
 
     local icon = LibStub("LibDBIcon-1.0")
-    icon:Register("BarTags", ldb, self.db.profile.minimap)
+    icon:Register("BarTags", ldb, BarTagsMinimapDB)
 
     self:RegisterChatCommand("bartags", "OpenOptions")
     self:RegisterChatCommand("bt", "OpenOptions")
